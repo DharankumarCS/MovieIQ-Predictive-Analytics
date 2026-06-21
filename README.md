@@ -165,12 +165,6 @@ http://localhost:8501
 
 ---
 
-## ◈ LIVE DEMO
-
-```
-🚀 Click here to try the live app(https://movieiq-predictive-analytics-on-film-success-hkz386d9xzv5mygjz.streamlit.app/)
-```
-
 ---
 
 ## ◈ AUTHOR
