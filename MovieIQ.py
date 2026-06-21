@@ -11,6 +11,17 @@ import ast
 
 # --- Page Config ---
 st.set_page_config(page_title="🎬 MovieIQ Dashboard", layout="wide")
+# --- Hide Streamlit Branding ---
+st.markdown("""
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    .stDeployButton {display:none;}
+    [data-testid="stToolbar"] {visibility: hidden;}
+    [data-testid="manage-app-button"] {display:none;}
+    div[class*="viewerBadge"] {display:none;}
+    </style>
+""", unsafe_allow_html=True)
 
 # --- Sidebar About Section ---
 with st.sidebar.expander("ℹ️ About this app", expanded=True):
