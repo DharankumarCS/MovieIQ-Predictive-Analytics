@@ -198,4 +198,3 @@ http://localhost:8501
 ```
 A dashboard that predicts movie success before release.
 Built with Streamlit · Powered by Random Forest · Analyzed by SciPy
-```
