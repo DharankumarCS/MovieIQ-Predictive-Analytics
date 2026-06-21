@@ -1,71 +1,207 @@
-# 🎬 MovieIQ - Predictive Analytics on Film Success
+# MovieIQ — Predictive Analytics on Film Success
 
-An interactive Streamlit dashboard that analyzes and predicts the success of movies using key performance indicators such as budget, revenue, popularity, runtime, and average votes. Built with Python, this project leverages data visualization, statistical testing, and machine learning (Random Forest) for movie performance insights.
-
----
-
-## 🌐 Live Demo
-
-🚀 [Click here to try the live app](https://movieiq-predictive-analytics-on-film-success-hkz386d9xzv5mygjz.streamlit.app/)
-
----
-
-## 📊 Key Features
-
-- 🎯 Predicts whether a movie is likely to be successful (Revenue > Budget)
-- 📈 Visual insights using Seaborn & Matplotlib (Budget vs Revenue, Genre Trends)
-- 📊 T-Test and Chi-Square statistical tests
-- 🤖 Random Forest Classifier for success prediction
-- 🧠 Interactive filtering by genre and vote average via sidebar
-- 🧼 Clean, modular dashboard ready for deployment
-
----
-
-## 🧰 Tech Stack
-
-- **Python** 🐍
-- **Pandas**, **NumPy**
-- **Seaborn**, **Matplotlib**
-- **Scikit-learn**
-- **Streamlit**
-- **SciPy**
-
----
-
-## 📷 Screenshots
-
-| Dashboard Overview | Statistical Tests |
-|--------------------|-------------------|
-| ![Dashboard](assets/dashboard.png) | ![Tests](assets/stats_tests.png) |
-
-> Add more screenshots to the `assets/` folder and reference them similarly.
-
----
-
-## 🚀 Run Locally
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/nv2105/MovieIQ-Predictive-Analytics-on-Film-Success.git
-cd MovieIQ-Predictive-Analytics-on-Film-Success
- 
 ```
-### 2. Install dependencies
+███╗   ███╗ ██████╗ ██╗   ██╗██╗███████╗██╗ ██████╗ 
+████╗ ████║██╔═══██╗██║   ██║██║██╔════╝██║██╔═══██╗
+██╔████╔██║██║   ██║██║   ██║██║█████╗  ██║██║   ██║
+██║╚██╔╝██║██║   ██║╚██╗ ██╔╝██║██╔══╝  ██║██║▄▄ ██║
+██║ ╚═╝ ██║╚██████╔╝ ╚████╔╝ ██║███████╗██║╚██████╔╝
+╚═╝     ╚═╝ ╚═════╝   ╚═══╝  ╚═╝╚══════╝╚═╝ ╚══▀▀═╝ 
+```
+
+```
+[ PROJECT   ] ──► MovieIQ — Predictive Analytics on Film Success
+[ MODEL     ] ──► Random Forest Classifier
+[ FRAMEWORK ] ──► Streamlit Interactive Dashboard
+[ BACKEND   ] ──► Pandas · NumPy · Scikit-learn · SciPy
+[ STATUS    ] ──► LIVE · INTERACTIVE · PREDICTIVE
+Python Streamlit RandomForest Pandas Seaborn Scikit-learn
+```
+
+---
+
+## ◈ WHAT IS THIS?
+
+MovieIQ is an interactive Streamlit dashboard that analyzes and predicts the success of movies using key performance indicators. Drop in a movies dataset and the app:
+
+- Predicts whether a movie will be successful based on Budget vs Revenue
+- Visualizes trends across genres, budgets, popularity, and vote averages
+- Runs T-Test and Chi-Square statistical tests automatically
+- Uses Random Forest Classifier for ML-based success prediction
+- Filters interactively by genre and vote average via sidebar
+
+No manual analysis. Just explore, filter, and predict.
+
+---
+
+## ◈ SYSTEM ARCHITECTURE
+
+```
+┌─────────────────────────────────────────────────┐
+│              STREAMLIT DASHBOARD                │
+│                                                 │
+│  ┌───────────┐  ┌───────────┐  ┌───────────┐  │
+│  │  FILTER   │  │  VISUAL   │  │  PREDICT  │  │
+│  │ SIDEBAR   │  │ INSIGHTS  │  │  ENGINE   │  │
+│  │  🎛️       │  │  📊       │  │  🤖       │  │
+│  └─────┬─────┘  └─────┬─────┘  └─────┬─────┘  │
+│        │              │              │          │
+│        └──────────────┼──────────────┘          │
+│                       │                         │
+│                ┌──────▼──────┐                  │
+│                │  DATA LAYER │                  │
+│                │  Pandas +   │                  │
+│                │  NumPy      │                  │
+│                └──────┬──────┘                  │
+│                       │                         │
+│         ┌─────────────┼─────────────┐           │
+│         │             │             │           │
+│   ┌─────▼─────┐ ┌─────▼─────┐ ┌───▼───────┐   │
+│   │   STATS   │ │   PLOTS   │ │   ML      │   │
+│   │  T-Test   │ │  Seaborn  │ │  Random   │   │
+│   │  Chi-Sq   │ │  Matplotlib│ │  Forest   │   │
+│   │  SciPy    │ │           │ │  Sklearn  │   │
+│   └───────────┘ └───────────┘ └───────────┘   │
+└─────────────────────────────────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────────┐
+│                 movies.csv                      │
+│  budget · revenue · popularity · runtime        │
+│  vote_average · title · genres                  │
+└─────────────────────────────────────────────────┘
+```
+
+---
+
+## ◈ KEY FEATURES
+
+```
+┌─────────────────────────────────────────────────┐
+│  FEATURE          │  DESCRIPTION                │
+│───────────────────│────────────────────────────│
+│  🎯 Prediction    │  Revenue > Budget = Success │
+│  📈 Visualization │  Budget vs Revenue trends   │
+│  📊 Statistics    │  T-Test + Chi-Square tests  │
+│  🤖 ML Model      │  Random Forest Classifier   │
+│  🧠 Filtering     │  Genre + Vote Average       │
+│  🧼 Clean UI      │  Modular Streamlit layout   │
+└─────────────────────────────────────────────────┘
+```
+
+---
+
+## ◈ TECH STACK
+
+```
+┌─────────────────────────────────────────────────┐
+│  Layer          │  Technology                   │
+│─────────────────│──────────────────────────────│
+│  Dashboard      │  Streamlit                   │
+│  Data           │  Pandas, NumPy               │
+│  Visualization  │  Seaborn, Matplotlib         │
+│  Machine Learning│  Scikit-learn (Random Forest)│
+│  Statistics     │  SciPy (T-Test, Chi-Square)  │
+│  Language       │  Python 🐍                   │
+└─────────────────────────────────────────────────┘
+```
+
+---
+
+## ◈ PROJECT STRUCTURE
+
+```
+MovieIQ/
+├── MovieIQ.py          ← Main Streamlit dashboard
+├── movies.csv          ← Dataset (budget, revenue, genres...)
+├── requirements.txt    ← Python dependencies
+└── assets/             ← Screenshots and images
+```
+
+---
+
+## ◈ DATASET
+
+```
+movies.csv must include these columns:
+
+┌──────────────┬─────────────────────────────┐
+│  Column      │  Description                │
+│──────────────│────────────────────────────│
+│  budget      │  Production budget          │
+│  revenue     │  Box office revenue         │
+│  popularity  │  Popularity score           │
+│  runtime     │  Movie duration (minutes)   │
+│  vote_average│  Average user rating        │
+│  title       │  Movie title                │
+│  genres      │  Genre categories           │
+└──────────────┴─────────────────────────────┘
+```
+
+---
+
+## ◈ SETUP AND RUN
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/dharankumar/MovieIQ.git
+cd MovieIQ
+```
+
+### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
-### 3. Run the app
+
+### 3. Run the App
 ```bash
 streamlit run MovieIQ.py
 ```
-## 📁 Dataset
-Make sure the project includes a `movies.csv` file with the following columns:<br>
-` budget, revenue, popularity, runtime, vote_average, title, genres`
-<br>
-## 👨‍💻 Author<br>
-### Naman Vora<br>
-#### Final Year CSE Student | Aspiring Data Analyst<br>
-📫 [LinkedIn](www.linkedin.com/in/namanvora21) • [GitHub](https://github.com/nv2105)
 
-## 📄 License
-This project is open source and available under the [MIT License.](https://mit-license.org/) 
+### 4. Open in Browser
+```
+http://localhost:8501
+```
+
+---
+
+## ◈ LIVE DEMO
+
+```
+🚀 Click here to try the live app(https://movieiq-predictive-analytics-on-film-success-hkz386d9xzv5mygjz.streamlit.app/)
+```
+
+---
+
+## ◈ AUTHOR
+
+```
+┌──────────────────────────────────────────────────┐
+│                                                  │
+│  Dharankumar                                     │
+│  B.Tech — AI and Data Science                    │
+│                                                  │
+│  Project: MovieIQ — Predictive Analytics         │
+│           on Film Success                        │
+│  Stack:   Streamlit · Random Forest · Pandas     │
+│           Seaborn · Scikit-learn · SciPy         │
+│                                                  │
+└──────────────────────────────────────────────────┘
+
+┌────────────────────────────────────────────────────┐
+│                                                    │
+│   APP FLOW                                         │
+│                                                    │
+│   LOAD ──► FILTER ──► VISUALIZE ──► PREDICT       │
+│              ▲              │            │         │
+│              │   (sidebar)  │            │         │
+│              └──────────────┘            │         │
+│                                          ▼         │
+│                                   SUCCESS / FAIL ✅ │
+│                                                    │
+└────────────────────────────────────────────────────┘
+
+```
+A dashboard that predicts movie success before release.
+Built with Streamlit · Powered by Random Forest · Analyzed by SciPy
+```
